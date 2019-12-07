@@ -13,10 +13,11 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RecorderComponent } from './recorder/recorder.component';
 import { MaterialModule } from './shared/material.module';
 import { GoalService } from './goals/goal.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CoreInfrastructureService } from './shared/core-infrastructure.service';
 import { ApplicationSettingsService } from './shared/application-settings.service';
 import { SnackbarService } from './shared/snackbar.service';
+import { ApiRequestInterceptor } from './shared/api-request.interceptor';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { SnackbarService } from './shared/snackbar.service';
     MaterialModule
   ],
   providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiRequestInterceptor, multi: true },
     CoreInfrastructureService,
     ApplicationSettingsService,
     SnackbarService,

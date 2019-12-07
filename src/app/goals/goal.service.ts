@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { IGoal } from './goal.model';
 import { HttpClient } from '@angular/common/http';
 import { CoreInfrastructureService } from '../shared/core-infrastructure.service';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class GoalService {
@@ -13,10 +14,7 @@ export class GoalService {
     console.log(goal);
   }
 
-  all() {
-    const baseUrl = this.core.baseUrl();
-    const headers = this.core.httpHeaders();
-
-    return this.http.get(`${baseUrl}/goals`, { headers });
+  all(): Observable<IGoal[]> {
+    return this.http.get<IGoal[]>(`/goals`);
   }
 }

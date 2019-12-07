@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  appName: 'Guitar Smart Session',
+  version: '1.0.0',
+  api: {
+    baseUrl: 'http://localhost:3000'
+  }
 };
 
 /*

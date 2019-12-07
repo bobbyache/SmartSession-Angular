@@ -1,0 +1,38 @@
+{
+    "goals": [
+        {
+          "id": 1,
+          "title": "Dead or Alive (Bon Jovi)",
+          "category": "Song/Track",
+          "dateCreated": "2019/2/16",
+          "progress": 33,
+          "deadline": "2020/12/12"
+        },
+        {
+          "id": 2,
+          "title": "Smoke on the Water (Deep Purple)",
+          "category": "Song/Track",
+          "dateCreated": "2019/2/14",
+          "progress": 28,
+          "deadline": "2020/12/12"
+        }
+    ],
+    "exercises": [
+      {
+        "id": 1,
+        "title": "Dead or Alive (Measures 1 - 6)",
+        "type": "Guitar Pro File and Video",
+        "speed": 90,
+        "dateCreated": "2019/2/16",
+        "progress": 33
+      },
+      {
+        "id": 2,
+        "title": "Dead or Alive (Measures 7 - 12)",
+        "type": "Guitar Pro File and Video",
+        "speed": 110,
+        "dateCreated": "2019/2/16",
+        "progress": 33
+      }
+    ]
+}

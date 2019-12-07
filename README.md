@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Application Specific Documentation
+
+## Json Server
+
+To install Json Server run the following at your terminal `npm install json-server`
+Json Server will allow you to mock a rest json server if you prefer to work on the FE without access to a real API (or you don't want to call into an real API).
+
+To run json-server type the following at the terminal `npm run jsonserver`. This is set up in the package.json file under scripts. See the following websites for more information:
+
+- Creating Demo APIs with json-server - https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server
+- JSON Server on npmjs.com: https://www.npmjs.com/package/json-server
+-   https://www.youtube.com/watch?v=1zkgdLZEdwM
+-   https://github.com/typicode/json-server

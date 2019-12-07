@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CoreInfrastructureService } from './shared/core-infrastructure.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'SmartSessionUi';
+  title = this.core.applicationName;
+  version = this.core.version;
+
+  constructor(private core: CoreInfrastructureService) {}
 }

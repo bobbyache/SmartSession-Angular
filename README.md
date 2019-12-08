@@ -39,3 +39,54 @@ To run json-server type the following at the terminal `npm run jsonserver`. This
 - JSON Server on npmjs.com: https://www.npmjs.com/package/json-server
 -   https://www.youtube.com/watch?v=1zkgdLZEdwM
 -   https://github.com/typicode/json-server
+
+## Setting up Material
+
+You can go to angular.material.io and if you go to Guides, Getting Started... all the steps you need to set up are there.
+
+So the steps are
+
+- Install Angular Material and Angular CDK
+- Animations Support
+- Import the component modules
+- Include a theme
+- Gesture support (hammerjs)
+- Add material icons
+
+`
+npm install --save @angular/material @angular/cdk
+npm install --save @angular/animations
+npm install --save hammerjs
+`
+
+ignore errors if coming from codelyzer since this is a linting toool
+
+import BrowserAnimationsModule into AppComponent
+Create a new module to take in all your material imports
+
+`ng g m material --dry-run`
+
+`ng g m material --flat`
+
+material.angular.io <------------ documentation
+
+Now you must include a theme
+So add this to your styles.scss
+You can find these themes: node_modules\@angular\material\prebuilt-themes
+
+`@import "~@angular/material/prebuilt-themes/indigo-pink.css";`
+
+Open up main.ts because we need to import hammerjs
+
+`import 'hammerjs';`
+
+Add material icons to index.html
+https://google.github.io/material-design-icons/
+
+`<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
+    Import MatIconModule to your materials module
+
+For material fonts
+`<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">`
+

@@ -1,8 +1,22 @@
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <h2>{{ version }}</h2>
-</div>
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+    <h2>{{ version }}</h2>
+  </div>
+  
+  
+  
+  <mat-sidenav-container class="example-container">
+      <mat-sidenav opened="{{ showSideNav }}">Sidenav content</mat-sidenav>
+      <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <app-tool-bar></app-tool-bar>
+          <!-- <div><button>Toggle Sidenav</button></div>
+          <div>LOGO</div> -->
+        </mat-toolbar>
+        <main>
+          <router-outlet></router-outlet>
+        </main>
+      </mat-sidenav-content>
+  </mat-sidenav-container>

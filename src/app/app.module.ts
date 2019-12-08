@@ -18,6 +18,7 @@ import { CoreInfrastructureService } from './shared/core-infrastructure.service'
 import { ApplicationSettingsService } from './shared/application-settings.service';
 import { SnackbarService } from './shared/snackbar.service';
 import { ApiRequestInterceptor } from './shared/api-request.interceptor';
+import { ToolBarComponent } from './tool-bar/tool-bar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ApiRequestInterceptor } from './shared/api-request.interceptor';
     GoalsComponent,
     DiaryComponent,
     NavBarComponent,
-    RecorderComponent
+    RecorderComponent,
+    ToolBarComponent
   ],
   imports: [
     BrowserModule,

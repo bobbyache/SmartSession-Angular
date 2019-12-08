@@ -1,5 +1,5 @@
 
-import { MatToolbarModule, MatSnackBarModule, MatCheckbox, MatCheckboxModule } from '@angular/material';
+import { MatToolbarModule, MatSnackBarModule, MatCheckboxModule, MatSidenavModule } from '@angular/material';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
@@ -19,7 +19,9 @@ import { NgModule } from '@angular/core';
     MatButtonModule,
     MatTableModule,
     MatSnackBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   exports: [
     MatToolbarModule,
@@ -29,7 +31,9 @@ import { NgModule } from '@angular/core';
     MatButtonModule,
     MatTableModule,
     MatSnackBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSidenavModule,
+    MatToolbarModule
   ],
   providers: [
   ]

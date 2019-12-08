@@ -9,6 +9,7 @@ import { CoreInfrastructureService } from './shared/core-infrastructure.service'
 export class AppComponent {
   title = this.core.applicationName;
   version = this.core.version;
+  showSideNav = true;
 
   constructor(private core: CoreInfrastructureService) {}
 }

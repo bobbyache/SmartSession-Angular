@@ -1,7 +1,6 @@
 
-<div>
-    <ul class="container">
-        <li class="title" ><h1>{{ title }} - {{ version }}</h1></li>
+<div fxFlex fxLayout fxLayoutGap="10px" fxLayoutAlign="flex-end">
+    <ul fxLayout>
         <li routerLinkActive="active"><a [routerLink]="['dashboard']">Dashboard</a></li>
         <li routerLinkActive="active"><a [routerLink]="['recorder']">Recorder</a></li>
         <li routerLinkActive="active"><a [routerLink]="['routines']">Routines</a></li>

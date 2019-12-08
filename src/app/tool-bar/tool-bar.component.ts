@@ -8,9 +8,6 @@ import { CoreInfrastructureService } from '../shared/core-infrastructure.service
 })
 export class ToolBarComponent implements OnInit {
 
-  title = this.core.applicationName;
-  version = this.core.version;
-
   constructor(private core: CoreInfrastructureService) { }
 
   ngOnInit() {

@@ -19,6 +19,7 @@ import { ApplicationSettingsService } from './shared/application-settings.servic
 import { SnackbarService } from './shared/snackbar.service';
 import { ApiRequestInterceptor } from './shared/api-request.interceptor';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    FlexLayoutModule,
     MaterialModule
   ],
   providers: [

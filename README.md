@@ -90,3 +90,9 @@ https://google.github.io/material-design-icons/
 For material fonts
 `<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">`
 
+### Install Flex Layout
+
+npm install @angular/flex-layout --save
+
+and then import the flex layout module into every feature module that needs it.
+

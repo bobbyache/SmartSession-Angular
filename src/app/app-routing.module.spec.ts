@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RoutinesComponent } from './routines/routines.component';
 import { RecorderComponent } from './recorder/recorder.component';
-import { ExercisesComponent } from './exercises/exercises.component';
 import { GoalsComponent } from './goals/goals.component';
 import { DiaryComponent } from './diary/diary.component';
 import { MaterialModule } from './shared/material.module';
@@ -18,6 +17,7 @@ import { ApplicationSettingsService } from './shared/services/application-settin
 import { SnackbarService } from './shared/services/snackbar/snackbar.service';
 import { GoalService } from './goals/goal.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TasksComponent } from './tasks/tasks.component';
 
 describe('Router: App', () => {
     let location: Location;
@@ -37,7 +37,7 @@ describe('Router: App', () => {
                 DashboardComponent,
                 RoutinesComponent,
                 RecorderComponent,
-                ExercisesComponent,
+                TasksComponent,
                 GoalsComponent,
                 DiaryComponent,
                 NavBarComponent,
@@ -77,10 +77,10 @@ describe('Router: App', () => {
         tick();
         expect(location.path()).toBe('/recorder');
     }));
-    it('navigate to "exercises" redirects you to /exercises', fakeAsync(() => {
-        router.navigate(['exercises']);
+    it('navigate to "tasks" redirects you to /tasks', fakeAsync(() => {
+        router.navigate(['tasks']);
         tick();
-        expect(location.path()).toBe('/exercises');
+        expect(location.path()).toBe('/tasks');
     }));
     it('navigate to "goals" redirects you to /goals', fakeAsync(() => {
         router.navigate(['goals']);

@@ -13,9 +13,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { routes } from '../app-routing.module';
 import { RoutinesComponent } from '../routines/routines.component';
 import { RecorderComponent } from '../recorder/recorder.component';
-import { ExercisesComponent } from '../exercises/exercises.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { DiaryComponent } from '../diary/diary.component';
+import { TasksComponent } from '../tasks/tasks.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -35,7 +35,7 @@ describe('DashboardComponent', () => {
         DashboardComponent,
         RoutinesComponent,
         RecorderComponent,
-        ExercisesComponent,
+        TasksComponent,
         GoalsComponent,
         DiaryComponent
       ],
@@ -73,11 +73,11 @@ describe('DashboardComponent', () => {
       advance();
       expect(location.path()).toEqual('/routines');
     }));
-    it('should navigate to successfully to exercises', fakeAsync(() => {
+    it('should navigate to successfully to tasks', fakeAsync(() => {
       const menu = fixture.debugElement.queryAll(By.css('a[routerlink]'))[2];
       menu.triggerEventHandler('click', { button: 0 });
       advance();
-      expect(location.path()).toEqual('/exercises');
+      expect(location.path()).toEqual('/tasks');
     }));
     it('should navigate to successfully to diary', fakeAsync(() => {
       const menu = fixture.debugElement.queryAll(By.css('a[routerlink]'))[3];

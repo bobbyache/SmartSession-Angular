@@ -1,15 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExercisesComponent } from './exercises.component';
+import { TasksComponent } from './tasks.component';
 import { MaterialModule } from '../shared/material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 
-describe('ExercisesComponent', () => {
-  let component: ExercisesComponent;
-  let fixture: ComponentFixture<ExercisesComponent>;
+describe('TasksComponent', () => {
+  let component: TasksComponent;
+  let fixture: ComponentFixture<TasksComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,7 +18,7 @@ describe('ExercisesComponent', () => {
         NoopAnimationsModule,
         HttpClientTestingModule
       ],
-      declarations: [ ExercisesComponent ],
+      declarations: [ TasksComponent ],
       providers: [
         ApplicationSettingsService,
         SnackbarService
@@ -28,7 +28,7 @@ describe('ExercisesComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExercisesComponent);
+    fixture = TestBed.createComponent(TasksComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { IGoal } from './goal.model';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { GoalHttpService } from '../shared/services/http/goal-http.service';
 
 @Injectable()
 export class GoalService {
 
-  constructor(private http: HttpClient) {
+  constructor(private httpService: GoalHttpService) {
   }
 
   create(goal: IGoal) {
@@ -14,6 +15,6 @@ export class GoalService {
   }
 
   all(): Observable<IGoal[]> {
-    return this.http.get<IGoal[]>(`/goals`);
+    return this.httpService.all();
   }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CoreInfrastructureService } from './shared/core-infrastructure.service';
+import { CoreInfrastructureService } from './shared/services/core-infrastructure.service';
 
 @Component({
   selector: 'app-root',

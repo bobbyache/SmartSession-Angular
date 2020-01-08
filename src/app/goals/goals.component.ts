@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalService } from './goal.service';
-import { CoreInfrastructureService } from 'src/app/shared/core-infrastructure.service';
+import { CoreInfrastructureService } from 'src/app/shared/services/core-infrastructure.service';
 
 @Component({
   templateUrl: './goals.component.html',

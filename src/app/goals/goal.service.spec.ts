@@ -2,9 +2,9 @@ import { TestBed } from '@angular/core/testing';
 
 import { GoalService } from './goal.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CoreInfrastructureService } from '../shared/core-infrastructure.service';
-import { ApplicationSettingsService } from '../shared/application-settings.service';
-import { SnackbarService } from '../shared/snackbar.service';
+import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
+import { ApplicationSettingsService } from '../shared/services/application-settings.service';
+import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 
 describe('GoalService', () => {
   beforeEach(() => {

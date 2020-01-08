@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GoalsComponent } from './goals.component';
-import { CoreInfrastructureService } from '../shared/core-infrastructure.service';
-import { ApplicationSettingsService } from '../shared/application-settings.service';
-import { SnackbarService } from '../shared/snackbar.service';
+import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
+import { ApplicationSettingsService } from '../shared/services/application-settings.service';
+import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 import { GoalService } from './goal.service';
 import { MaterialModule } from '../shared/material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';

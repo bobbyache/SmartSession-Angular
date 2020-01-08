@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SnackbarService } from './snackbar.service';
+import { SnackbarService } from './snackbar/snackbar.service';
 import { ApplicationSettingsService } from './application-settings.service';
 import { HttpHeaders } from '@angular/common/http';
 

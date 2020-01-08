@@ -14,10 +14,10 @@ import { RecorderComponent } from './recorder/recorder.component';
 import { MaterialModule } from './shared/material.module';
 import { GoalService } from './goals/goal.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { CoreInfrastructureService } from './shared/core-infrastructure.service';
-import { ApplicationSettingsService } from './shared/application-settings.service';
-import { SnackbarService } from './shared/snackbar.service';
-import { ApiRequestInterceptor } from './shared/api-request.interceptor';
+import { CoreInfrastructureService } from './shared/services/core-infrastructure.service';
+import { ApplicationSettingsService } from './shared/services/application-settings.service';
+import { SnackbarService } from './shared/services/snackbar/snackbar.service';
+import { ApiRequestInterceptor } from './shared/interceptors/api-request.interceptor';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 

@@ -12,9 +12,9 @@ import { GoalsComponent } from './goals/goals.component';
 import { DiaryComponent } from './diary/diary.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CoreInfrastructureService } from './shared/core-infrastructure.service';
-import { ApplicationSettingsService } from './shared/application-settings.service';
-import { SnackbarService } from './shared/snackbar.service';
+import { CoreInfrastructureService } from './shared/services/core-infrastructure.service';
+import { ApplicationSettingsService } from './shared/services/application-settings.service';
+import { SnackbarService } from './shared/services/snackbar/snackbar.service';
 import { GoalService } from './goals/goal.service';
 
 describe('AppComponent', () => {

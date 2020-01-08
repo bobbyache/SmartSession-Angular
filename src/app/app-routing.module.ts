@@ -6,6 +6,10 @@ import { GoalsComponent } from './goals/goals.component';
 import { DiaryComponent } from './diary/diary.component';
 import { RecorderComponent } from './recorder/recorder.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { TaskComponent } from './tasks/task/task.component';
+import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
+import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
+import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
 
 
 export const routes: Routes = [
@@ -14,6 +18,10 @@ export const routes: Routes = [
   { path: 'routines', component: RoutinesComponent },
   { path: 'recorder', component: RecorderComponent },
   { path: 'tasks', component: TasksComponent },
+  { path: 'tasks/:id/history', component: TaskProgressHistoryComponent },
+  { path: 'tasks/:id/history/edit', component: TaskProgressHistoryEditComponent },
+  { path: 'tasks/:id/edit', component: TaskEditComponent },
+  { path: 'tasks/:id', component: TaskComponent },
   { path: 'goals', component: GoalsComponent },
   { path: 'diary', component: DiaryComponent }
 ];

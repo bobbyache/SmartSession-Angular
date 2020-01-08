@@ -19,6 +19,10 @@ import { ApiRequestInterceptor } from './shared/interceptors/api-request.interce
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { TasksComponent } from './tasks/tasks.component';
+import { TaskComponent } from './tasks/task/task.component';
+import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
+import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
+import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { TasksComponent } from './tasks/tasks.component';
     NavBarComponent,
     RecorderComponent,
     ToolBarComponent,
-    TasksComponent
+    TasksComponent,
+    TaskComponent,
+    TaskEditComponent,
+    TaskProgressHistoryComponent,
+    TaskProgressHistoryEditComponent
   ],
   imports: [
     BrowserModule,

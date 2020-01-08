@@ -18,8 +18,12 @@ import { SnackbarService } from './shared/services/snackbar/snackbar.service';
 import { GoalService } from './goals/goal.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { TasksComponent } from './tasks/tasks.component';
+import { TaskComponent } from './tasks/task/task.component';
+import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
+import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
+import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
 
-describe('Router: App', () => {
+fdescribe('Router: App', () => {
     let location: Location;
     let router: Router;
     let fixture;
@@ -37,6 +41,10 @@ describe('Router: App', () => {
                 DashboardComponent,
                 RoutinesComponent,
                 RecorderComponent,
+                TaskComponent,
+                TaskEditComponent,
+                TaskProgressHistoryComponent,
+                TaskProgressHistoryEditComponent,
                 TasksComponent,
                 GoalsComponent,
                 DiaryComponent,
@@ -77,11 +85,34 @@ describe('Router: App', () => {
         tick();
         expect(location.path()).toBe('/recorder');
     }));
+
     it('navigate to "tasks" redirects you to /tasks', fakeAsync(() => {
         router.navigate(['tasks']);
         tick();
         expect(location.path()).toBe('/tasks');
     }));
+
+    it('navigate to a specific task directs you to /tasks/[id]', fakeAsync(() => {
+        router.navigate(['tasks/1']);
+        tick();
+        expect(location.path()).toBe('/tasks/1');
+    }));
+    it('navigate to a specific task for edit directs you to /tasks/[id]/edit', fakeAsync(() => {
+        router.navigate(['tasks/1/edit']);
+        tick();
+        expect(location.path()).toBe('/tasks/1/edit');
+    }));
+    it('navigate to a specific task history directs you to /tasks/[id]/history', fakeAsync(() => {
+        router.navigate(['tasks/1/history']);
+        tick();
+        expect(location.path()).toBe('/tasks/1/history');
+    }));
+    it('navigate to a specific task history directs you to /tasks/[id]/history/edit', fakeAsync(() => {
+        router.navigate(['tasks/1/history/edit']);
+        tick();
+        expect(location.path()).toBe('/tasks/1/history/edit');
+    }));
+
     it('navigate to "goals" redirects you to /goals', fakeAsync(() => {
         router.navigate(['goals']);
         tick();

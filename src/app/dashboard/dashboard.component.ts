@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
+import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,13 +8,13 @@ import { CoreInfrastructureService } from '../shared/services/core-infrastructur
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private core: CoreInfrastructureService) { }
+  constructor(private snackBar: SnackbarService) { }
 
   ngOnInit() {
   }
 
   notify() {
-    this.core.informationSnackbar('This is just here to show that the snackbar is working!');
+    this.snackBar.information('This is just here to show that the snackbar is working!');
   }
 
 }

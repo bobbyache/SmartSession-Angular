@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CoreInfrastructureService } from './shared/services/core-infrastructure.service';
+import { ApplicationSettingsService } from './shared/services/application-settings.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,8 @@ import { CoreInfrastructureService } from './shared/services/core-infrastructure
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = this.core.applicationName;
-  version = this.core.version;
+  title = this.appSettings.applicationName;
+  version = this.appSettings.version;
 
-  constructor(private core: CoreInfrastructureService) {}
+  constructor(private appSettings: ApplicationSettingsService) {}
 }

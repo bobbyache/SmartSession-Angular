@@ -14,7 +14,6 @@ import { RecorderComponent } from './recorder/recorder.component';
 import { MaterialModule } from './shared/material.module';
 import { GoalService } from './goals/goal.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { CoreInfrastructureService } from './shared/services/core-infrastructure.service';
 import { ApplicationSettingsService } from './shared/services/application-settings.service';
 import { SnackbarService } from './shared/services/snackbar/snackbar.service';
 import { ApiRequestInterceptor } from './shared/interceptors/api-request.interceptor';
@@ -43,7 +42,6 @@ import {FlexLayoutModule} from '@angular/flex-layout';
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiRequestInterceptor, multi: true },
-    CoreInfrastructureService,
     ApplicationSettingsService,
     SnackbarService,
     GoalService

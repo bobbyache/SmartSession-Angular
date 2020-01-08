@@ -1,5 +1,5 @@
-import { Location } from "@angular/common";
-import { Router } from "@angular/router";
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -14,7 +14,6 @@ import { DiaryComponent } from './diary/diary.component';
 import { MaterialModule } from './shared/material.module';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CoreInfrastructureService } from './shared/services/core-infrastructure.service';
 import { ApplicationSettingsService } from './shared/services/application-settings.service';
 import { SnackbarService } from './shared/services/snackbar/snackbar.service';
 import { GoalService } from './goals/goal.service';
@@ -45,7 +44,6 @@ describe('Router: App', () => {
                 ToolBarComponent
             ],
             providers: [
-                CoreInfrastructureService,
                 ApplicationSettingsService,
                 SnackbarService,
                 GoalService

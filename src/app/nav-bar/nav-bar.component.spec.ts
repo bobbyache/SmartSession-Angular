@@ -4,7 +4,6 @@ import { NavBarComponent } from './nav-bar.component';
 import { MaterialModule } from '../shared/material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -23,7 +22,6 @@ describe('NavBarComponent', () => {
       ],
       declarations: [ NavBarComponent ],
       providers: [
-        CoreInfrastructureService,
         ApplicationSettingsService,
         SnackbarService
       ],

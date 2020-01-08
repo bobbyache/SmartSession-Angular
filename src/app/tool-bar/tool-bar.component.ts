@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
 
 @Component({
   selector: 'app-tool-bar',
@@ -8,7 +7,7 @@ import { CoreInfrastructureService } from '../shared/services/core-infrastructur
 })
 export class ToolBarComponent implements OnInit {
 
-  constructor(private core: CoreInfrastructureService) { }
+  constructor() { }
 
   ngOnInit() {
   }

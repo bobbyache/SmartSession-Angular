@@ -4,7 +4,6 @@ import { DashboardComponent } from './dashboard.component';
 import { MaterialModule } from '../shared/material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 
@@ -21,10 +20,8 @@ describe('DashboardComponent', () => {
       ],
       declarations: [ DashboardComponent ],
       providers: [
-        CoreInfrastructureService,
         ApplicationSettingsService,
-        SnackbarService,
-        // GoalService
+        SnackbarService
       ],
     })
     .compileComponents();

@@ -1,7 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GoalsComponent } from './goals.component';
-import { CoreInfrastructureService } from '../shared/services/core-infrastructure.service';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 import { GoalService } from './goal.service';
@@ -22,7 +21,6 @@ describe('GoalsComponent', () => {
       ],
       declarations: [ GoalsComponent ],
       providers: [
-        CoreInfrastructureService,
         ApplicationSettingsService,
         SnackbarService,
         GoalService

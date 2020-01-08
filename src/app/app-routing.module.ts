@@ -8,7 +8,7 @@ import { DiaryComponent } from './diary/diary.component';
 import { RecorderComponent } from './recorder/recorder.component';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'routines', component: RoutinesComponent },

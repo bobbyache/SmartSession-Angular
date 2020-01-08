@@ -20,7 +20,7 @@ import { SnackbarService } from './shared/snackbar.service';
 import { GoalService } from './goals/goal.service';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-fdescribe('Router: App', () => {
+describe('Router: App', () => {
     let location: Location;
     let router: Router;
     let fixture;
@@ -49,7 +49,7 @@ fdescribe('Router: App', () => {
                 ApplicationSettingsService,
                 SnackbarService,
                 GoalService
-              ],
+            ],
         });
 
         router = TestBed.get(Router);
@@ -94,14 +94,4 @@ fdescribe('Router: App', () => {
         tick();
         expect(location.path()).toBe('/diary');
     }));
-
-
-    /*
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'routines', component: RoutinesComponent },
-  { path: 'recorder', component: RecorderComponent },
-  { path: 'exercises', component: ExercisesComponent },
-  { path: 'goals', component: GoalsComponent },
-  { path: 'diary', component: DiaryComponent }
-    */
 });

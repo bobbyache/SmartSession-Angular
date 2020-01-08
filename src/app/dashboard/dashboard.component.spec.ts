@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardComponent } from './dashboard.component';
+import { MaterialModule } from '../shared/material.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { CoreInfrastructureService } from '../shared/core-infrastructure.service';
+import { ApplicationSettingsService } from '../shared/application-settings.service';
+import { SnackbarService } from '../shared/snackbar.service';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -8,7 +14,18 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      imports: [
+        MaterialModule,
+        NoopAnimationsModule,
+        HttpClientTestingModule
+      ],
+      declarations: [ DashboardComponent ],
+      providers: [
+        CoreInfrastructureService,
+        ApplicationSettingsService,
+        SnackbarService,
+        // GoalService
+      ],
     })
     .compileComponents();
   }));

@@ -6,6 +6,17 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
+import { RouterTestingModule } from '@angular/router/testing';
+import { routes } from '../app-routing.module';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { RoutinesComponent } from '../routines/routines.component';
+import { RecorderComponent } from '../recorder/recorder.component';
+import { TaskProgressHistoryComponent } from './task-progress-history/task-progress-history.component';
+import { TaskProgressHistoryEditComponent } from './task-progress-history-edit/task-progress-history-edit.component';
+import { TaskEditComponent } from './task-edit/task-edit.component';
+import { TaskComponent } from './task/task.component';
+import { GoalsComponent } from '../goals/goals.component';
+import { DiaryComponent } from '../diary/diary.component';
 
 describe('TasksComponent', () => {
   let component: TasksComponent;
@@ -14,11 +25,23 @@ describe('TasksComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
+        RouterTestingModule.withRoutes(routes),
         MaterialModule,
         NoopAnimationsModule,
         HttpClientTestingModule
       ],
-      declarations: [ TasksComponent ],
+      declarations: [
+        TaskComponent,
+        TasksComponent,
+        DashboardComponent,
+        DiaryComponent,
+        RoutinesComponent,
+        RecorderComponent,
+        GoalsComponent,
+        TaskEditComponent,
+        TaskProgressHistoryComponent,
+        TaskProgressHistoryEditComponent
+      ],
       providers: [
         ApplicationSettingsService,
         SnackbarService

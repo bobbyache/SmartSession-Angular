@@ -6,6 +6,10 @@ import { ApplicationSettingsService } from 'src/app/shared/services/application-
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
+/* *************************************************************************************************
+ngUnsubscribe Pattern
+https://www.intertech.com/Blog/angular-best-practice-unsubscribing-rxjs-observables/
+************************************************************************************************* */
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',

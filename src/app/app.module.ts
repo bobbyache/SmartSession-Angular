@@ -23,10 +23,12 @@ import { TaskComponent } from './tasks/task/task.component';
 import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
 import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
+import { OkCancelDialogComponent } from './shared/dialogs/ok-cancel-dialog/ok-cancel-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    OkCancelDialogComponent,
     DashboardComponent,
     RoutinesComponent,
     GoalsComponent,
@@ -54,6 +56,7 @@ import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-
     SnackbarService,
     GoalService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ OkCancelDialogComponent ]
 })
 export class AppModule { }

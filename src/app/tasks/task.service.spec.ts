@@ -5,7 +5,7 @@ import { TaskHttpService } from '../shared/services/http/task-http.service';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-fdescribe('TasksService', () => {
+describe('TasksService', () => {
   let service: TaskService;
   let httpService: TaskHttpService;
 

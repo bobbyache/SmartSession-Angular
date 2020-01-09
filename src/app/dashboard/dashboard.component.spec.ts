@@ -16,6 +16,10 @@ import { RecorderComponent } from '../recorder/recorder.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { DiaryComponent } from '../diary/diary.component';
 import { TasksComponent } from '../tasks/tasks.component';
+import { TaskEditComponent } from '../tasks/task-edit/task-edit.component';
+import { TaskProgressHistoryComponent } from '../tasks/task-progress-history/task-progress-history.component';
+import { TaskProgressHistoryEditComponent } from '../tasks/task-progress-history-edit/task-progress-history-edit.component';
+import { TaskComponent } from '../tasks/task/task.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -36,6 +40,10 @@ describe('DashboardComponent', () => {
         RoutinesComponent,
         RecorderComponent,
         TasksComponent,
+        TaskComponent,
+        TaskEditComponent,
+        TaskProgressHistoryComponent,
+        TaskProgressHistoryEditComponent,
         GoalsComponent,
         DiaryComponent
       ],

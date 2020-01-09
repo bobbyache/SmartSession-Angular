@@ -37,26 +37,20 @@
       {
         "id": 1,
         "title": "Dead or Alive (Measures 1 - 6)",
-        "type": "Guitar Pro File and Video",
-        "speed": 90,
         "dateCreated": "2019/2/16",
-        "progress": 33
+        "progress": 67
       },
       {
         "id": 2,
         "title": "Dead or Alive (Measures 7 - 12)",
-        "type": "Guitar Pro File and Video",
-        "speed": 110,
         "dateCreated": "2019/2/16",
         "progress": 33
       },
       {
-        "id": 2,
+        "id": 3,
         "title": "Paranoid Guitar Solo (Measures 17 - 29)",
-        "type": "Guitar Pro File and Video",
-        "speed": 165,
         "dateCreated": "2019/10/12",
-        "progress": 78
+        "progress": 0
       }
     ]
 }

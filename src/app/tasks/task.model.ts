@@ -1,7 +1,6 @@
 export interface ITask {
-    taskName: string;
-    deadlineDate: string;
-    category: string;
+    id: number;
+    title: string;
+    dateCreated: Date;
     progress: number;
-    description: string;
 }

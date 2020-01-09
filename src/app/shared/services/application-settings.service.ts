@@ -4,6 +4,8 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class ApplicationSettingsService {
+    public static ID_TOKEN = 'id';
+
     private readonly baseUrl = environment.api.baseUrl;
     private headers = new HttpHeaders();
 

@@ -13,4 +13,8 @@ export class TaskHttpService {
   all(): Observable<ITask[]> {
     return this.http.get<ITask[]>(`/tasks`);
   }
+
+  get(id: number): Observable<ITask> {
+    return this.http.get<ITask>(`/tasks/${id}`);
+  }
 }

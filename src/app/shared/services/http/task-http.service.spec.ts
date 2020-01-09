@@ -29,4 +29,11 @@ describe('TaskHttpService', () => {
     const req = httpTestingController.expectOne(`/tasks`);
     expect(req.request.method).toEqual('GET', 'Expected a GET request');
   });
+
+  it('should get a single task', () => {
+    service.get(1).subscribe(() => {});
+
+    const req = httpTestingController.expectOne(`/tasks/1`, 'Expected one call to get a single task with the correct task id');
+    expect(req.request.method).toEqual('GET', 'Expected a GET request');
+  });
 });

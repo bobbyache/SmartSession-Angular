@@ -18,4 +18,8 @@ export class TaskService {
   all(): Observable<ITask[]> {
     return this.httpService.all();
   }
+
+  get(id: number): Observable<ITask> {
+    return this.httpService.get(id);
+  }
 }

@@ -41,7 +41,7 @@ To run json-server type the following at the terminal `npm run jsonserver`. This
 
 - Creating Demo APIs with json-server - https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server
 - JSON Server on npmjs.com: https://www.npmjs.com/package/json-server
--   https://www.youtube.com/watch?v=1zkgdLZEdwM
+- Create a Fake REST API with JSON-Server - https://www.youtube.com/watch?v=1zkgdLZEdwM
 -   https://github.com/typicode/json-server
 
 ## Setting up Material

@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ITask } from '../task.model';
 import { ActivatedRoute, Params } from '@angular/router';
-import { TaskService } from '../task.service';
+import { TasksService } from '../tasks.service';
 import { ApplicationSettingsService } from 'src/app/shared/services/application-settings.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -20,7 +20,7 @@ export class TaskComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<any> = new Subject<any>();
   public task: ITask;
 
-  constructor(private service: TaskService, private route: ActivatedRoute) { }
+  constructor(private service: TasksService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.loadTask(this.route.snapshot.params[ApplicationSettingsService.ID_TOKEN]);

@@ -4,7 +4,7 @@ import { TaskComponent } from './task.component';
 import { MaterialModule } from 'src/app/shared/material.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { TaskService } from '../task.service';
+import { TasksService } from '../tasks.service';
 import { SnackbarService } from 'src/app/shared/services/snackbar/snackbar.service';
 import { ApplicationSettingsService } from 'src/app/shared/services/application-settings.service';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -21,13 +21,13 @@ import { TaskEditComponent } from '../task-edit/task-edit.component';
 import { of } from 'rxjs';
 
 describe('TaskComponent', () => {
-  let taskService: any; // in order to use the spy!
+  let tasksService: any; // in order to use the spy!
   let component: TaskComponent;
   let fixture: ComponentFixture<TaskComponent>;
 
   beforeEach(async(() => {
 
-    const taskServiceSpy = jasmine.createSpyObj('TaskService', ['get']);
+    const tasksServiceSpy = jasmine.createSpyObj('TaskService', ['get']);
 
     TestBed.configureTestingModule({
       imports: [
@@ -51,13 +51,13 @@ describe('TaskComponent', () => {
       providers: [
         ApplicationSettingsService,
         SnackbarService,
-        { provide: TaskService, useValue: taskServiceSpy }
+        { provide: TasksService, useValue: tasksServiceSpy }
       ],
     })
     .compileComponents()
     .then(() => {
-      taskService = TestBed.get(TaskService);
-      taskService.get.and.returnValue(of({ id: 1, title: 'title', dateCreated: null, progress: 33 }));
+      tasksService = TestBed.get(TasksService);
+      tasksService.get.and.returnValue(of({ id: 1, title: 'title', dateCreated: null, progress: 33 }));
 
       fixture = TestBed.createComponent(TaskComponent);
       component = fixture.componentInstance;

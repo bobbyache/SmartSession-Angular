@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TaskService } from './task.service';
+import { TasksService } from './tasks.service';
 import { TaskHttpService } from '../shared/services/http/task-http.service';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ITask } from './task.model';
 
 describe('TasksService', () => {
-  let service: TaskService;
+  let service: TasksService;
   let httpService: TaskHttpService;
 
   beforeEach(() => {
@@ -18,11 +18,11 @@ describe('TasksService', () => {
       providers: [
         ApplicationSettingsService,
         TaskHttpService,
-        TaskService
+        TasksService
       ],
     });
 
-    service = TestBed.get(TaskService);
+    service = TestBed.get(TasksService);
     httpService = TestBed.get(TaskHttpService);
   });
 

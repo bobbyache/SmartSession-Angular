@@ -18,12 +18,17 @@ import { TasksComponent } from '../tasks.component';
 import { TaskProgressHistoryComponent } from '../task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from '../task-progress-history-edit/task-progress-history-edit.component';
 import { TaskEditComponent } from '../task-edit/task-edit.component';
+import { of } from 'rxjs';
 
 describe('TaskComponent', () => {
+  let taskService: any; // in order to use the spy!
   let component: TaskComponent;
   let fixture: ComponentFixture<TaskComponent>;
 
   beforeEach(async(() => {
+
+    const taskServiceSpy = jasmine.createSpyObj('TaskService', ['get']);
+
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule.withRoutes(routes),
@@ -46,19 +51,27 @@ describe('TaskComponent', () => {
       providers: [
         ApplicationSettingsService,
         SnackbarService,
-        TaskService
+        { provide: TaskService, useValue: taskServiceSpy }
       ],
     })
-    .compileComponents();
+    .compileComponents()
+    .then(() => {
+      taskService = TestBed.get(TaskService);
+      taskService.get.and.returnValue(of({ id: 1, title: 'title', dateCreated: null, progress: 33 }));
+
+      fixture = TestBed.createComponent(TaskComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
+    });
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(TaskComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  describe('when created', () => {
+    it('should create and populate the initially retrieved task', () => {
+      expect(component).toBeTruthy();
+      expect(component.task).toBeTruthy();
+      expect(component.task.id).toBe(1, 'Unexpected task id value');
+      expect(component.task.title).toBe('title', 'Unexpected task title value');
+      expect(component.task.progress).toBe(33, 'Unexpected task progress value');
+    });
   });
 });

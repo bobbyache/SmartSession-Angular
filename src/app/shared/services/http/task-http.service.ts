@@ -17,4 +17,12 @@ export class TaskHttpService {
   get(id: number): Observable<ITask> {
     return this.http.get<ITask>(`/tasks/${id}`);
   }
+
+  delete(id: number): Observable<ITask> {
+    return this.http.delete<ITask>(`/tasks/${id}`);
+  }
+
+  update(task: ITask): Observable<ITask> {
+    return this.http.put<ITask>(`/tasks/${task.id}`, task);
+  }
 }

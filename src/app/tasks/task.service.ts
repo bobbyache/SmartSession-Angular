@@ -22,4 +22,12 @@ export class TaskService {
   get(id: number): Observable<ITask> {
     return this.httpService.get(id);
   }
+
+  delete(id: number): Observable<ITask> {
+    return this.httpService.delete(id);
+  }
+
+  update(task: ITask): Observable<ITask> {
+    return this.httpService.update(task);
+  }
 }

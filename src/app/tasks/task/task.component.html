@@ -1,7 +1,11 @@
 
-<p><a [routerLink]="['edit']">Edit Task 1</a></p>
-<p><a [routerLink]="['history']">View Task 1 History</a></p>
-<p><a [routerLink]="['history', 'edit']">Edit Task 1 History</a></p>
+<div>
+    <ul class="container">
+        <li><a [routerLink]="['edit']">Edit</a></li>
+        <li><a [routerLink]="['history']">View History</a></li>
+        <li><a [routerLink]="['history', 'edit']">Edit History</a></li>
+    </ul>
+</div>
 <hr>
 <div>
     <h1>{{ task?.id }} - {{ task?.title }}</h1>
@@ -9,7 +13,7 @@
     <h3>Progress: {{ task?.progress }} %</h3>
 </div>
 <hr>
-<p>Test that params observable works</p>
+<p>Other Recent Tasks</p>
 <p><a [routerLink]="['/tasks', 1]">View Task 1</a></p>
 <p><a [routerLink]="['/tasks', 2]">View Task 2</a></p>
 <p><a [routerLink]="['/tasks', 3]">View Task 3</a></p>

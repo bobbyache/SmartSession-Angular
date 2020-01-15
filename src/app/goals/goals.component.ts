@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GoalService } from './goal.service';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
+import { IGoal } from './goal.model';
 
 @Component({
   templateUrl: './goals.component.html',
@@ -9,16 +10,16 @@ import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
 export class GoalsComponent implements OnInit {
 
   columnsToDisplay = ['title', 'category', 'progress'];
-  goals: any;
+  goals: IGoal[];
 
   constructor(private goalService: GoalService, private snackBar: SnackbarService) { }
 
   ngOnInit(): void {
     this.goalService.all().subscribe(
-      (result) => {
+      result => {
         this.goals = result;
       },
-      (error) => {
+      error => {
         console.log(error);
       }
     );

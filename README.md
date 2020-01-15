@@ -44,6 +44,28 @@ To run json-server type the following at the terminal `npm run jsonserver`. This
 - Create a Fake REST API with JSON-Server - https://www.youtube.com/watch?v=1zkgdLZEdwM
 -   https://github.com/typicode/json-server
 
+To cater for the generation of a single json server file from a list of more representative files (ie. goals.json, tasks.json etc.). The following package will
+need to be installed:
+
+`npm install json-concat --save-dev`
+
+Now create a concat-json.js file and add the following code in it:
+
+`
+var jsonConcat = require('json-concat');
+jsonConcat({
+        src: 'mocks/data',
+        dest: 'mocks/db.json',
+    }, function(json){
+    console.log(json);
+});
+`
+A reference to this file needs to be added to the package.json file:
+
+See: Mock Data for Angular 6 applications with JSON Server — Part 2(final) - https://medium.com/@kaustubhtalathi/mock-data-for-angular-5-applications-with-json-server-part-2-final-427bd68005bb
+
+`"generate:jsonserver":"node \"./mocks/concat-json.js\"",`
+
 ## Setting up Material
 
 You can go to angular.material.io and if you go to Guides, Getting Started... all the steps you need to set up are there.

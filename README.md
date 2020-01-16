@@ -34,15 +34,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Json Server
 
+### REST Research
+
+- [REST API concepts and examples (9 min)](https://www.youtube.com/watch?v=7YcW25PHnAA)
+- [REST API & RESTful Web Services Explained | Web Services Tutorial (16 min)](https://www.youtube.com/watch?v=LooL6_chvN4)
+
+### Notes
+
 To install Json Server run the following at your terminal `npm install json-server`
 Json Server will allow you to mock a rest json server if you prefer to work on the FE without access to a real API (or you don't want to call into an real API).
 
 To run json-server type the following at the terminal `npm run jsonserver`. This is set up in the package.json file under scripts. See the following websites for more information:
 
-- Creating Demo APIs with json-server - https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server
-- JSON Server on npmjs.com: https://www.npmjs.com/package/json-server
-- Create a Fake REST API with JSON-Server - https://www.youtube.com/watch?v=1zkgdLZEdwM
--   https://github.com/typicode/json-server
+- [Creating Demo APIs with json-server](https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server)
+- [JSON Server on npmjs.com](https://www.npmjs.com/package/json-server)
+- [Create a Fake REST API with JSON-Server](https://www.youtube.com/watch?v=1zkgdLZEdwM)
+- [GitHub Page](https://github.com/typicode/json-server)
 
 All your configuration is added to the package.json file. This configuration points to the json-server.json config file and it has further settings such as the default host, port, and custom route mappings.
 
@@ -66,7 +73,7 @@ jsonConcat({
 `
 A reference to this file needs to be added to the package.json file:
 
-See: Mock Data for Angular 6 applications with JSON Server — Part 2(final) - https://medium.com/@kaustubhtalathi/mock-data-for-angular-5-applications-with-json-server-part-2-final-427bd68005bb
+[Mock Data for Angular 6 applications with JSON Server — Part 2(final)](https://medium.com/@kaustubhtalathi/mock-data-for-angular-5-applications-with-json-server-part-2-final-427bd68005bb)
 
 `"generate:jsonserver":"node \"./mocks/concat-json.js\"",`
 
@@ -75,7 +82,8 @@ Now you can run `npm run generate:jsonserver` to generate the data in your db.js
 Note: db.json is added to gitignore because it is now generated.
 
 ### Use Faker to Generate Data
-- https://github.com/marak/Faker.js/
+
+- [GitHub Page](https://github.com/marak/Faker.js/)
 
 ## Setting up Material
 
@@ -117,8 +125,7 @@ Open up main.ts because we need to import hammerjs
 
 `import 'hammerjs';`
 
-Add material icons to index.html
-https://google.github.io/material-design-icons/
+[Add material icons to index.html](https://google.github.io/material-design-icons/)
 
 `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 

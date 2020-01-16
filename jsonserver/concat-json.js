@@ -1,7 +1,7 @@
 var jsonConcat = require('json-concat');
 jsonConcat({
-src: 'mocks/data',
-dest: 'mocks/db.json',
+src: 'jsonserver/data',
+dest: 'jsonserver/db.json',
 }, function(json){
 console.log(json);
 });

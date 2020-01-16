@@ -44,6 +44,10 @@ To run json-server type the following at the terminal `npm run jsonserver`. This
 - Create a Fake REST API with JSON-Server - https://www.youtube.com/watch?v=1zkgdLZEdwM
 -   https://github.com/typicode/json-server
 
+All your configuration is added to the package.json file. This configuration points to the json-server.json config file and it has further settings such as the default host, port, and custom route mappings.
+
+### Use Multiple json-server Files
+
 To cater for the generation of a single json server file from a list of more representative files (ie. goals.json, tasks.json etc.). The following package will
 need to be installed:
 
@@ -65,6 +69,13 @@ A reference to this file needs to be added to the package.json file:
 See: Mock Data for Angular 6 applications with JSON Server — Part 2(final) - https://medium.com/@kaustubhtalathi/mock-data-for-angular-5-applications-with-json-server-part-2-final-427bd68005bb
 
 `"generate:jsonserver":"node \"./mocks/concat-json.js\"",`
+
+Now you can run `npm run generate:jsonserver` to generate the data in your db.json file.
+
+Note: db.json is added to gitignore because it is now generated.
+
+### Use Faker to Generate Data
+- https://github.com/marak/Faker.js/
 
 ## Setting up Material
 

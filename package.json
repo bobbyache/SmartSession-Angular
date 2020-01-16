@@ -8,8 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generate:jsonserver":"node \"./mocks/concat-json.js\"",
-    "jsonserver": "json-server --watch ./mocks/db.json"
+    "generate:jsonserver":"node \"./jsonserver/concat-json.js\"",
+    "jsonserver": "json-server --watch ./jsonserver/db.json --config ./jsonserver/json-server.json"
   },
   "private": true,
   "dependencies": {

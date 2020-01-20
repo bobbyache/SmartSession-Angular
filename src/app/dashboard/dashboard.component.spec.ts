@@ -20,6 +20,7 @@ import { TaskEditComponent } from '../tasks/task-edit/task-edit.component';
 import { TaskProgressHistoryComponent } from '../tasks/task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from '../tasks/task-progress-history-edit/task-progress-history-edit.component';
 import { TaskComponent } from '../tasks/task/task.component';
+import { FormsModule } from '@angular/forms';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -32,6 +33,7 @@ describe('DashboardComponent', () => {
       imports: [
         RouterTestingModule.withRoutes(routes),
         MaterialModule,
+        FormsModule,
         NoopAnimationsModule,
         HttpClientTestingModule
       ],

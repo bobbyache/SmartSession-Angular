@@ -22,6 +22,19 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+To rather use the mocha reporter, one should remove the karma-jasmine-html-reporter from the plugins in karma.conf.js. One should replace this line with:
+`require('karma-coverage-istanbul-reporter'),`
+
+Replacement to reporters:
+`reporters: ['mocha'],`
+
+Run the following command:
+`npm install karma-mocha-reporter --save-dev`
+
+Remove all node_modules and do an npm install.
+
+[Add Mocha reporter for Karma unit tests to your Angular CLI project](https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/)
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).

@@ -1,0 +1,36 @@
+{
+    "goals": [
+        {
+          "id": 1,
+          "title": "Dead or Alive (Bon Jovi)",
+          "category": "Song/Track",
+          "dateCreated": "2019/2/16",
+          "progress": 33,
+          "deadline": "2020/12/12"
+        },
+        {
+          "id": 2,
+          "title": "Smoke on the Water (Deep Purple)",
+          "category": "Song/Track",
+          "dateCreated": "2019/2/14",
+          "progress": 28,
+          "deadline": "2020/12/12"
+        },
+        {
+          "id": 2,
+          "title": "Paranoid (Black Sabbath)",
+          "category": "Solo",
+          "dateCreated": "2019/10/12",
+          "progress": 78,
+          "deadline": "2020/12/12"
+        },
+        {
+          "id": 2,
+          "title": "Strumming Patterns 12 - 21",
+          "category": "Rhythm/Strumming",
+          "dateCreated": "2019/10/12",
+          "progress": 32,
+          "deadline": "2020/12/12"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+ul li {
+  border: 1px solid white;
+  padding: 5px;
+  margin: 5px;
+  width: 100px;
+  text-align: center;
+  
+  list-style-type: none;
+  
+}
+
+a {
+  text-decoration:none;
+  color:white;
+}
+
+a:hover {
+  background-color: coral;
+}
+
+.active {
+  background-color: coral;
+}

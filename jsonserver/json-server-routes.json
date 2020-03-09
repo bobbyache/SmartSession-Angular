@@ -1,0 +1,5 @@
+{
+    "/api/*": "/$1",
+    "/exercises": "/exercise_topics",
+    "/exercises/:id": "/exercise_details/:id"
+  }

@@ -1,0 +1,5 @@
+{
+    "host":"localhost",
+    "port":3000,
+    "routes":"./jsonserver/json-server-routes.json"
+}

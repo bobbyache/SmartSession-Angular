@@ -153,3 +153,8 @@ npm install @angular/flex-layout --save
 
 and then import the flex layout module into every feature module that needs it.
 
+## Research into Authorization and Authentication
+
+- [Article 1 - Angular 8 - JWT Authentication Example & Tutorial](https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial)
+- [Article 2 - Angular 8 - Role Based Authorization Tutorial with Example - Jason Watmore](https://jasonwatmore.com/post/2019/08/06/angular-8-role-based-authorization-tutorial-with-example)
+

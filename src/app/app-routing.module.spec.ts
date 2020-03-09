@@ -22,6 +22,7 @@ import { TaskComponent } from './tasks/task/task.component';
 import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
 import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
+import { FormsModule } from '@angular/forms';
 
 describe('Router: App', () => {
     let location: Location;
@@ -33,6 +34,7 @@ describe('Router: App', () => {
             imports: [
                 RouterTestingModule.withRoutes(routes),
                 MaterialModule,
+                FormsModule,
                 NoopAnimationsModule,
                 HttpClientTestingModule
             ],

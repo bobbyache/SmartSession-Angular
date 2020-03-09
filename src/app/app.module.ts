@@ -24,6 +24,7 @@ import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
 import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
 import { OkCancelDialogComponent } from './shared/dialogs/ok-cancel-dialog/ok-cancel-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { OkCancelDialogComponent } from './shared/dialogs/ok-cancel-dialog/ok-ca
     HttpClientModule,
     AppRoutingModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiRequestInterceptor, multi: true },

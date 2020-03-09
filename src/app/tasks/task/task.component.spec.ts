@@ -19,6 +19,7 @@ import { TaskProgressHistoryComponent } from '../task-progress-history/task-prog
 import { TaskProgressHistoryEditComponent } from '../task-progress-history-edit/task-progress-history-edit.component';
 import { TaskEditComponent } from '../task-edit/task-edit.component';
 import { of } from 'rxjs';
+import { FormsModule } from '@angular/forms';
 
 describe('TaskComponent', () => {
   let tasksService: any; // in order to use the spy!
@@ -33,6 +34,7 @@ describe('TaskComponent', () => {
       imports: [
         RouterTestingModule.withRoutes(routes),
         MaterialModule,
+        FormsModule,
         NoopAnimationsModule,
         HttpClientTestingModule
       ],

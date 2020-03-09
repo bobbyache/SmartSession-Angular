@@ -2,6 +2,25 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
+## Build and Launch Process.
+
+#### Open terminal 1:
+```
+npm run generate:jsonserver
+```
+```
+npm run jsonserver
+```
+#### Open terminal 2:
+```
+ng serve
+```
+or
+```
+ng test
+```
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -21,6 +40,19 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+To rather use the mocha reporter, one should remove the karma-jasmine-html-reporter from the plugins in karma.conf.js. One should replace this line with:
+`require('karma-coverage-istanbul-reporter'),`
+
+Replacement to reporters:
+`reporters: ['mocha'],`
+
+Run the following command:
+`npm install karma-mocha-reporter --save-dev`
+
+Remove all node_modules and do an npm install.
+
+[Add Mocha reporter for Karma unit tests to your Angular CLI project](https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/)
 
 ## Running end-to-end tests
 
@@ -139,4 +171,9 @@ For material fonts
 npm install @angular/flex-layout --save
 
 and then import the flex layout module into every feature module that needs it.
+
+## Research into Authorization and Authentication
+
+- [Article 1 - Angular 8 - JWT Authentication Example & Tutorial](https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial)
+- [Article 2 - Angular 8 - Role Based Authorization Tutorial with Example - Jason Watmore](https://jasonwatmore.com/post/2019/08/06/angular-8-role-based-authorization-tutorial-with-example)
 

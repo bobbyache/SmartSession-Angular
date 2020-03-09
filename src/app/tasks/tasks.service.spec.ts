@@ -5,6 +5,7 @@ import { TaskHttpService } from '../shared/services/http/task-http.service';
 import { ApplicationSettingsService } from '../shared/services/application-settings.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ITask } from './task.model';
+import { FormsModule } from '@angular/forms';
 
 describe('TasksService', () => {
   let service: TasksService;
@@ -13,7 +14,8 @@ describe('TasksService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        FormsModule
       ],
       providers: [
         ApplicationSettingsService,

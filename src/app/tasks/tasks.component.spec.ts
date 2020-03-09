@@ -17,6 +17,7 @@ import { TaskEditComponent } from './task-edit/task-edit.component';
 import { TaskComponent } from './task/task.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { DiaryComponent } from '../diary/diary.component';
+import { FormsModule } from '@angular/forms';
 
 describe('TasksComponent', () => {
   let component: TasksComponent;
@@ -27,6 +28,7 @@ describe('TasksComponent', () => {
       imports: [
         RouterTestingModule.withRoutes(routes),
         MaterialModule,
+        FormsModule,
         NoopAnimationsModule,
         HttpClientTestingModule
       ],

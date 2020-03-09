@@ -1,1 +1,13 @@
-<p>task-edit works!</p>
+<form fxLayout="column" fxLayoutGap="10px" (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <mat-form-field>
+        <input 
+            type="text" 
+            matInput 
+            placeholder="Title" 
+            required
+            ngModel
+            name="Title"
+        >
+    </mat-form-field>
+    <button mat-raised-button color="primary">Submit</button>
+</form>

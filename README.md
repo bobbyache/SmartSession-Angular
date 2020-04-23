@@ -41,18 +41,93 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+There are two configurations one can use test. You configure settings in the karma.conf.js.
+
+### Default Karma Reporter
+
+```
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
+
+module.exports = function (config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma')
+    ],
+    client: {
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/SmartSessionUi'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
+    },
+    reporters: ['progress', 'kjhtml'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false,
+    restartOnFileChange: true
+  });
+};
+```
+### Use Mocha Reporter
+
 To rather use the mocha reporter, one should remove the karma-jasmine-html-reporter from the plugins in karma.conf.js. One should replace this line with:
 `require('karma-coverage-istanbul-reporter'),`
 
-Replacement to reporters:
-`reporters: ['mocha'],`
+- Replacement to reporters: `reporters: ['mocha'],`
 
-Run the following command:
-`npm install karma-mocha-reporter --save-dev`
+- Run the following command: `npm install karma-mocha-reporter --save-dev`
 
-Remove all node_modules and do an npm install.
+- Remove all node_modules and do an npm install.
 
 [Add Mocha reporter for Karma unit tests to your Angular CLI project](https://juristr.com/blog/2018/02/add-mocha-reporter-angular-cli-tests/)
+
+
+```
+// Karma configuration file, see link for more information
+// https://karma-runner.github.io/1.0/config/configuration-file.html
+
+module.exports = function (config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-mocha-reporter'),
+      // require('karma-jasmine-html-reporter'),
+      require('karma-coverage-istanbul-reporter'),
+      require('@angular-devkit/build-angular/plugins/karma')
+    ],
+    client: {
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+    coverageIstanbulReporter: {
+      dir: require('path').join(__dirname, './coverage/SmartSessionUi'),
+      reports: ['html', 'lcovonly', 'text-summary'],
+      fixWebpackSourcePaths: true
+    },
+    reporters: ['mocha'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['ChromeHeadless'],
+    singleRun: false,
+    restartOnFileChange: true
+  });
+};
+
+```
 
 ## Running end-to-end tests
 

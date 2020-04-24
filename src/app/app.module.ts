@@ -28,6 +28,7 @@ import { FormsModule } from '@angular/forms';
 import { GoalComponent } from './goals/goal/goal.component';
 import { ItemProgressBarGraphComponent } from './shared/graphs/item-progress-bar-graph/item-progress-bar-graph.component';
 import { TimeProgressAreaGraphComponent } from './shared/graphs/time-progress-area-graph/time-progress-area-graph.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { TimeProgressAreaGraphComponent } from './shared/graphs/time-progress-ar
     AppRoutingModule,
     FlexLayoutModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    NgxChartsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiRequestInterceptor, multi: true },

@@ -254,4 +254,9 @@ and then import the flex layout module into every feature module that needs it.
 
 ## Research into adding Charts
 
-https://medium.com/codingthesmartway-com-blog/angular-chart-js-with-ng2-charts-e21c8262777f
+### NgxCharts
+
+
+[npmjs.com - @swimlane/ngx-charts - Declarative Charting Framework for Angular!](https://www.npmjs.com/package/@swimlane/ngx-charts)
+
+[ngx-charts on GitBook](https://swimlane.gitbook.io/ngx-charts/)

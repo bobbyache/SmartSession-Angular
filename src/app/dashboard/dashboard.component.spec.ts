@@ -21,6 +21,9 @@ import { TaskProgressHistoryComponent } from '../tasks/task-progress-history/tas
 import { TaskProgressHistoryEditComponent } from '../tasks/task-progress-history-edit/task-progress-history-edit.component';
 import { TaskComponent } from '../tasks/task/task.component';
 import { FormsModule } from '@angular/forms';
+import { GoalComponent } from '../goals/goal/goal.component';
+import { ItemProgressBarGraphComponent } from '../shared/graphs/item-progress-bar-graph/item-progress-bar-graph.component';
+import { TimeProgressAreaGraphComponent } from '../shared/graphs/time-progress-area-graph/time-progress-area-graph.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -47,6 +50,10 @@ describe('DashboardComponent', () => {
         TaskProgressHistoryComponent,
         TaskProgressHistoryEditComponent,
         GoalsComponent,
+        GoalComponent,
+        DiaryComponent,
+        ItemProgressBarGraphComponent,
+        TimeProgressAreaGraphComponent,
         DiaryComponent
       ],
       providers: [

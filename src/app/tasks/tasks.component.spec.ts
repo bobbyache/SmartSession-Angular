@@ -18,6 +18,9 @@ import { TaskComponent } from './task/task.component';
 import { GoalsComponent } from '../goals/goals.component';
 import { DiaryComponent } from '../diary/diary.component';
 import { FormsModule } from '@angular/forms';
+import { GoalComponent } from '../goals/goal/goal.component';
+import { ItemProgressBarGraphComponent } from '../shared/graphs/item-progress-bar-graph/item-progress-bar-graph.component';
+import { TimeProgressAreaGraphComponent } from '../shared/graphs/time-progress-area-graph/time-progress-area-graph.component';
 
 describe('TasksComponent', () => {
   let component: TasksComponent;
@@ -40,6 +43,9 @@ describe('TasksComponent', () => {
         RoutinesComponent,
         RecorderComponent,
         GoalsComponent,
+        GoalComponent,
+        ItemProgressBarGraphComponent,
+        TimeProgressAreaGraphComponent,
         TaskEditComponent,
         TaskProgressHistoryComponent,
         TaskProgressHistoryEditComponent

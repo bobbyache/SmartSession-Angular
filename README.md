@@ -252,3 +252,6 @@ and then import the flex layout module into every feature module that needs it.
 - [Article 1 - Angular 8 - JWT Authentication Example & Tutorial](https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial)
 - [Article 2 - Angular 8 - Role Based Authorization Tutorial with Example - Jason Watmore](https://jasonwatmore.com/post/2019/08/06/angular-8-role-based-authorization-tutorial-with-example)
 
+## Research into adding Charts
+
+https://medium.com/codingthesmartway-com-blog/angular-chart-js-with-ng2-charts-e21c8262777f

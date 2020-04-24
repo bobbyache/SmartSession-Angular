@@ -20,6 +20,9 @@ import { TaskProgressHistoryEditComponent } from '../task-progress-history-edit/
 import { TaskEditComponent } from '../task-edit/task-edit.component';
 import { of } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { GoalComponent } from 'src/app/goals/goal/goal.component';
+import { ItemProgressBarGraphComponent } from 'src/app/shared/graphs/item-progress-bar-graph/item-progress-bar-graph.component';
+import { TimeProgressAreaGraphComponent } from 'src/app/shared/graphs/time-progress-area-graph/time-progress-area-graph.component';
 
 describe('TaskComponent', () => {
   let tasksService: any; // in order to use the spy!
@@ -48,6 +51,10 @@ describe('TaskComponent', () => {
         RoutinesComponent,
         RecorderComponent,
         GoalsComponent,
+        GoalComponent,
+        DiaryComponent,
+        ItemProgressBarGraphComponent,
+        TimeProgressAreaGraphComponent,
         DiaryComponent
       ],
       providers: [

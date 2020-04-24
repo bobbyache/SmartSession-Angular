@@ -25,6 +25,9 @@ import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task
 import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
 import { OkCancelDialogComponent } from './shared/dialogs/ok-cancel-dialog/ok-cancel-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { GoalComponent } from './goals/goal/goal.component';
+import { ItemProgressBarGraphComponent } from './shared/graphs/item-progress-bar-graph/item-progress-bar-graph.component';
+import { TimeProgressAreaGraphComponent } from './shared/graphs/time-progress-area-graph/time-progress-area-graph.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,10 @@ import { FormsModule } from '@angular/forms';
     TaskComponent,
     TaskEditComponent,
     TaskProgressHistoryComponent,
-    TaskProgressHistoryEditComponent
+    TaskProgressHistoryEditComponent,
+    GoalComponent,
+    ItemProgressBarGraphComponent,
+    TimeProgressAreaGraphComponent
   ],
   imports: [
     BrowserModule,

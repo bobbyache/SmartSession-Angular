@@ -10,6 +10,7 @@ import { TaskComponent } from './tasks/task/task.component';
 import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
 import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
+import { GoalComponent } from './goals/goal/goal.component';
 
 
 export const routes: Routes = [
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'tasks/:id/edit', component: TaskEditComponent },
   { path: 'tasks/:id', component: TaskComponent },
   { path: 'goals', component: GoalsComponent },
+  { path: 'goals/:id', component: GoalComponent },
   { path: 'diary', component: DiaryComponent }
 ];
 

@@ -23,6 +23,9 @@ import { TaskEditComponent } from './tasks/task-edit/task-edit.component';
 import { TaskProgressHistoryComponent } from './tasks/task-progress-history/task-progress-history.component';
 import { TaskProgressHistoryEditComponent } from './tasks/task-progress-history-edit/task-progress-history-edit.component';
 import { FormsModule } from '@angular/forms';
+import { ItemProgressBarGraphComponent } from './shared/graphs/item-progress-bar-graph/item-progress-bar-graph.component';
+import { GoalComponent } from './goals/goal/goal.component';
+import { TimeProgressAreaGraphComponent } from './shared/graphs/time-progress-area-graph/time-progress-area-graph.component';
 
 describe('Router: App', () => {
     let location: Location;
@@ -49,6 +52,10 @@ describe('Router: App', () => {
                 TaskProgressHistoryEditComponent,
                 TasksComponent,
                 GoalsComponent,
+                GoalComponent,
+                DiaryComponent,
+                ItemProgressBarGraphComponent,
+                TimeProgressAreaGraphComponent,
                 DiaryComponent,
                 NavBarComponent,
                 ToolBarComponent
@@ -119,6 +126,11 @@ describe('Router: App', () => {
         router.navigate(['goals']);
         tick();
         expect(location.path()).toBe('/goals');
+    }));
+    it('navigate to a specific goal directs you to /goals/[id]', fakeAsync(() => {
+        router.navigate(['goals/1']);
+        tick();
+        expect(location.path()).toBe('/goals/1');
     }));
     it('navigate to "diary" redirects you to /diary', fakeAsync(() => {
         router.navigate(['diary']);

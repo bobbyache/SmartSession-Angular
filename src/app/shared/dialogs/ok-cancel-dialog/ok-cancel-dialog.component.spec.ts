@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { OkCancelDialogComponent } from './ok-cancel-dialog.component';
 import { MaterialModule } from '../../material.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 describe('OkCancelDialogComponent', () => {
   let component: OkCancelDialogComponent;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SnackbarService } from '../shared/services/snackbar/snackbar.service';
-import { MatDialog, MatDialogConfig } from '@angular/material';
 import { OkCancelDialogComponent } from '../shared/dialogs/ok-cancel-dialog/ok-cancel-dialog.component';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',

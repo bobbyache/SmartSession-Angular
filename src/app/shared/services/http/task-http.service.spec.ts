@@ -15,8 +15,8 @@ describe('TaskHttpService', () => {
       ],
     });
 
-    service = TestBed.get(TaskHttpService);
-    httpTestingController = TestBed.get(HttpTestingController);
+    service = TestBed.inject(TaskHttpService);
+    httpTestingController = TestBed.inject(HttpTestingController);
 
   });
 

@@ -66,7 +66,6 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     SnackbarService,
     GoalService
   ],
-  bootstrap: [AppComponent],
-  entryComponents: [ OkCancelDialogComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

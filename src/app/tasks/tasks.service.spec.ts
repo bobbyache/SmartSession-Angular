@@ -24,8 +24,8 @@ describe('TasksService', () => {
       ],
     });
 
-    service = TestBed.get(TasksService);
-    httpService = TestBed.get(TaskHttpService);
+    service = TestBed.inject(TasksService);
+    httpService = TestBed.inject(TaskHttpService);
   });
 
   it('should be created', () => {

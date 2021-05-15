@@ -15,8 +15,8 @@ describe('GoalHttpService', () => {
       ],
     });
 
-    service = TestBed.get(GoalHttpService);
-    httpTestingController = TestBed.get(HttpTestingController);
+    service = TestBed.inject(GoalHttpService);
+    httpTestingController = TestBed.inject(HttpTestingController);
 
   });
 

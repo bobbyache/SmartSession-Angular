@@ -65,7 +65,7 @@ describe('TaskComponent', () => {
     })
     .compileComponents()
     .then(() => {
-      tasksService = TestBed.get(TasksService);
+      tasksService = TestBed.inject(TasksService);
       tasksService.get.and.returnValue(of({ id: 1, title: 'title', dateCreated: null, progress: 33 }));
 
       fixture = TestBed.createComponent(TaskComponent);

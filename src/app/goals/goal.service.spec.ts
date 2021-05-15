@@ -21,7 +21,7 @@ describe('GoalService', () => {
       ],
     });
 
-    service = TestBed.get(GoalService);
+    service = TestBed.inject(GoalService);
   });
 
   it('should be created', () => {
